@@ -1,0 +1,43 @@
+#apicalling for list all employees
+###
+GET http://127.0.0.1:8000/employees/
+Accept: application/json
+
+#apicall for creating employee
+###
+POST http://127.0.0.1:8000/employees/
+Content-Type: application/json
+
+{        "name":"hari",
+         "department":"hr",
+         "email":"hari@gmail.com",
+         "phone":"123454",
+         "salary":13400,
+         "location":"kakkanad" 
+
+}             
+
+#apicall for retrieve employee
+###
+GET  http://127.0.0.1:8000/employees/1/
+Accept: application/json
+
+#api call for updating employee
+###
+PUT http://127.0.0.1:8000/employees/1/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "hari",
+    "department": "hr",
+    "email": "hari@gmail.com",
+    "phone": "9867561299",
+    "salary": "550000",
+    "location": "thrissur"
+ }
+
+#api call for deleting employee
+###
+DELETE http://127.0.0.1:8000/employees/1/
+Accept: application/json
